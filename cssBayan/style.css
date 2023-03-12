@@ -4,6 +4,10 @@ body {
     border: 1.5em dashed gray;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    padding: 3%;
+    color: rgb(77, 17, 92);
+
 }
 h1{
     margin: 1em;
@@ -18,13 +22,34 @@ label {
     padding: 1em;
     background: burlywood;
     transition: ease 1s;
-    position: relative;
+
+}
+label::after{
+    padding: auto;
+
+}
+
+label:hover {
+    background: greenyellow;
 }
 .picture{
     display: flex;
     overflow: hidden;
+    border-radius: 7%;
+    cursor: pointer;
+    border: 0.5vh solid brown;
 }
 .picture img {
     height: 100%;
     width: 100%;
+}
+input+label+.picture {
+    height: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+input:checked+label+.picture {
+    height: 100%;
+    opacity: 100%;
+    transition: all 1.5s;
 }
