@@ -29,12 +29,25 @@ label::after{
     padding: auto;
     font-family: 'Lato', sans-serif;
 }
-input:checked+label::after {
-    transform: rotate(90deg);
-}
+
 
 label:hover {
     background: greenyellow;
+}
+.plus {
+    height: 2em;
+    width: 2em;
+    background: url(./pictures/svg/plus.svg) no-repeat center;
+    background-size: contain;
+    rotate: -45deg;
+    transition: all 0.5s linear;
+}
+.plus {
+    opacity: 0;
+}
+.plus:hover {
+    rotate: 0deg;
+    opacity: 1;
 }
 .picture{
     display: flex;
@@ -66,5 +79,31 @@ input:checked+label+.picture {
     label:hover+.picture {
         opacity: 100%;
         height: 100%;
+    }
+}
+@media (min-width: 320px) {
+    body {
+        font-size: .75em;
+    }
+    h1, label {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 820px) {
+    body {
+        font-size: 1.25em;
+    }
+    h1, label {
+        font-size: 1.75em;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 1.5em;
+    }
+    h1, label {
+        font-size: 2em;
     }
 }
