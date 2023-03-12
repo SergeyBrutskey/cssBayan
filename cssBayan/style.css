@@ -4,11 +4,16 @@ body {
     border: 1.5em dashed gray;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    padding: 3%;
+    color: rgb(77, 17, 92);
+    font-weight: 400;
 }
 h1{
     margin: 1em;
     color: darkred;
     text-align: center;
+    font-weight: 700;
 }
 input {
     display: none;
@@ -18,13 +23,90 @@ label {
     padding: 1em;
     background: burlywood;
     transition: ease 1s;
-    position: relative;
+
+}
+label::after{
+    padding: auto;
+    font-family: 'Lato', sans-serif;
+}
+
+
+label:hover {
+    background: greenyellow;
+}
+.plus {
+    height: 2em;
+    width: 2em;
+    background: url(./pictures/svg/plus.svg) no-repeat center;
+    background-size: contain;
+    rotate: -45deg;
+    transition: all 0.5s linear;
+}
+
+.plus {
+    opacity: 0;
+}
+.plus:hover {
+    rotate: 0deg;
+    opacity: 1;
 }
 .picture{
     display: flex;
     overflow: hidden;
+    border-radius: 7%;
+    cursor: pointer;
+    border: 0.5vh solid brown;
+    justify-content: center;
+    background-size: auto;
 }
 .picture img {
     height: 100%;
     width: 100%;
+}
+input+label+.picture {
+    height: 0;
+    opacity: 0;
+    transition: all 0.8s linear;
+}
+input:checked+label+.picture {
+    height: 100%;
+    opacity: 100%;
+    transition: all 1.5s;
+}
+@media (hover: hover) {
+
+    .picture:hover {
+        opacity: 100%;
+        height: 100%;
+    }
+    label:hover+.picture {
+        opacity: 100%;
+        height: 100%;
+    }
+}
+@media (min-width: 320px) {
+    body {
+        font-size: .75em;
+    }
+    h1, label {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 820px) {
+    body {
+        font-size: 1.25em;
+    }
+    h1, label {
+        font-size: 1.75em;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 1.5em;
+    }
+    h1, label {
+        font-size: 2em;
+    }
 }
