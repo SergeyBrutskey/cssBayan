@@ -42,6 +42,7 @@ label:hover {
     rotate: -45deg;
     transition: all 0.5s linear;
 }
+
 .plus {
     opacity: 0;
 }
@@ -55,8 +56,10 @@ label:hover {
     border-radius: 7%;
     cursor: pointer;
     border: 0.5vh solid brown;
+    justify-content: center;
+    background-size: auto;
 }
-.picture+img {
+.picture img {
     height: 100%;
     width: 100%;
 }
