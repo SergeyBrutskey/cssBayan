@@ -1,0 +1,30 @@
+body {
+    background-color: antiquewhite;
+    width: 80%;
+    border: 1.5em dashed gray;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    margin: 1em;
+    color: darkred;
+    text-align: center;
+}
+input {
+    display: none;
+}
+label {
+    display: flex;
+    padding: 1em;
+    background: burlywood;
+    transition: ease 1s;
+    position: relative;
+}
+.picture{
+    display: flex;
+    overflow: hidden;
+}
+.picture img {
+    height: 100%;
+    width: 100%;
+}
